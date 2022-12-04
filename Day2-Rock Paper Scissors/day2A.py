@@ -1,7 +1,6 @@
 # X, A = Rock
 # Y, B = Paper
 # Z, Y = Scissors
-import re
 
 
 # Here I am checkin how many points will I get for using X, Y, Z hand and returnin the points
