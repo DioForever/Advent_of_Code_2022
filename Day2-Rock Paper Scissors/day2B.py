@@ -26,4 +26,3 @@ with open("input.txt", "r") as read:
         points_all += outcome_points
 # printed the points
 print(points_all)
-
