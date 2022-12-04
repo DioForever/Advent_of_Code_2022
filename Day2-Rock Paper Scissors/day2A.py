@@ -1,33 +1,37 @@
 # X, A = Rock
 # Y, B = Paper
 # Z, Y = Scissors
+import re
+
 
 # Here I am checkin how many points will I get for using X, Y, Z hand and returnin the points
 def points(your):
-    if your == "X":
-        return 1
-    elif your == "Y":
-        return 2
-    elif your == "Z":
-        return 3
+    match your:
+        case "X":
+            return 1
+        case "Y":
+            return 2
+        case "Z":
+            return 3
 
 # Here I am checkin if I won, lost or it is a draw
 # and I return points 6 - win, 3 - draw, 0 - lose
 def outcome(your, enemy):
-    if str(your) == "X" and str(enemy) == "A":
-        return 3
-    elif str(your) == "Y" and str(enemy) == "B":
-        return 3
-    elif str(your) == "Z" and str(enemy) == "C":
-        return 3
-    elif your == "X" and enemy=="C":
-        return 6
-    elif your == "Y" and enemy=="A":
-        return 6
-    elif your == "Z" and enemy=="B":
-        return 6
-    else:
-        return 0
+    match [your,enemy]:
+        case ["X","A"]:
+            return 3
+        case ["Y","B"]:
+            return 3
+        case ["Z","C"]:
+            return 3
+        case ["X","C"]:
+            return 6
+        case ["Y","A"]:
+            return 6
+        case ["Z","B"]:
+            return 6
+        case _:
+            return 0
 
 #I  created int points_all which stores all counted points
 points_all = 0
@@ -39,4 +43,4 @@ with open("input.txt", "r") as read:
         point_hand = points(your)
         point_outcome = outcome(your,enemy)
         points_all += point_hand + point_outcome
-print(f"all = {points_all}")
+print(points_all)

@@ -41,5 +41,3 @@ with open("input.txt", "r") as read:
         outcome_points = int(outcome_calculate(outcome, enemy))
         points_all += outcome_points
 print(points_all)
-
-

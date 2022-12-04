@@ -12,3 +12,4 @@ with open("input.txt","r") as read:
             if f_compartment.__contains__(item):
                 points += point_awarding.index(item)+1
                 break
+print(points)
