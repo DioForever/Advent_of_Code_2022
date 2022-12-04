@@ -12,3 +12,4 @@ for group in input:
     second_s = int(second.split("-")[1])
     if (first_f >= second_f and first_s <=second_s) or (first_f <= second_f and first_s >=second_s):
         output += 1
+print(output)
