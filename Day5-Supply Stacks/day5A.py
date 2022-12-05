@@ -58,6 +58,9 @@ def read_map(map: list):
                             items.remove(item)
                     if not items.__contains__(""):
                         finished = True
+        if not items.__contains__(" 1 "):
+            while len(items) != len(map_[0]):
+                items.append("   ")
 
 
         map_.append(items)
