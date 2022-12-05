@@ -68,7 +68,6 @@ def read_map(map: list):
 
     print(f"{max_items} - max_items")
 
-
     print(f"len {len(map)}")
 def read_instrutciotns(move: str):
     many = int(move.split(" ")[1])
