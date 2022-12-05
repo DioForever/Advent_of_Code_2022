@@ -101,6 +101,7 @@ def do_instruction(many: int, where: int, to:int):
             break
     # assign the new positions
     much = len(what_b)
+    print(f"assign {what_b}")
     for n in range(len(map_)):
         if much != 0:
             # I need to check from bottom to top
